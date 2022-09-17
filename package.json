@@ -1,17 +1,31 @@
 {
   "name": "tree-sitter-bqn",
   "version": "1.0.0",
-  "description": "",
+  "description": "BQN grammar for tree-sitter",
   "main": "bindings/node",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "parser",
+    "lexer"
+  ],
+  "author": "Dunya Kirkali",
+  "license": "MIT",
   "dependencies": {
     "nan": "^2.16.0"
   },
   "devDependencies": {
     "tree-sitter-cli": "^0.20.7"
-  }
+  },
+  "scripts": {
+    "test": "tree-sitter test"
+  },
+  "repository": "https://github.com/dunyakirkali/tree-sitter-bqn",
+  "tree-sitter": [
+    {
+      "scope": "source.bqn",
+      "file-types": [
+        "bqn"
+      ],
+      "injection-regex": "bqn"
+    }
+  ]
 }
